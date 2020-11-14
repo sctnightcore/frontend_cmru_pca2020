@@ -14,7 +14,6 @@
             :loading="tables_loading != true"
             hide-default-footer
             disable-pagination
-            class="elevation-1"
           >
             <template v-slot:item.action="{ item }">
               <v-btn :href="item.url.replace('m.', 'www.')">
@@ -22,9 +21,9 @@
               </v-btn>
             </template>
           </v-data-table>
-
+          <br/>
           <!-- Show Chart-->
-          <Chart :charts="charts.data" :height="200"></Chart>
+          <Chart :charts="charts.data" :width="500" :height="300"></Chart>
         </v-card-text>
         <v-card-actions>
           <v-icon x-large left>mdi-github</v-icon>

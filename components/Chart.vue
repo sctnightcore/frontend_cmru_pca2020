@@ -1,5 +1,8 @@
 <script>
 import { Bar } from 'vue-chartjs'
+import ChartJsPluginDataLabels from 'chartjs-plugin-datalabels'
+
+Chart.defaults.global.plugins.datalabels.display = true
 
 export default {
   extends: Bar,
@@ -58,6 +61,17 @@ export default {
               },
             },
           ],
+        },
+
+        plugins: {
+          datalabels: {
+            anchor: 'end',
+            align: 'top',
+            formatter: Math.round,
+            font: {
+              weight: 'bold',
+            },
+          },
         },
       },
     }
