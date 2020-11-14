@@ -55,13 +55,6 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     treeShake: true,
-    defaultAssets: {
-      font: {
-        family: 'Prompt' 
-      },    
-    },
-
-    
     theme: {
       dark: false,
       themes: {
@@ -80,6 +73,7 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    extractCSS: true
   },
 
   generate: {
