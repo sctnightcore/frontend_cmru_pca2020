@@ -18,6 +18,17 @@
           <!-- Show Chart-->
           <Chart :charts="charts" :height="200"></Chart>
         </v-card-text>
+        <v-card-actions>
+          <v-icon x-large left>mdi-github</v-icon>
+          <h4>
+            โปรเจคนี้ อยู่ภายใต้ GNU General Public License v3.0 ว่าด้วย Open
+            Source&nbsp
+          </h4>
+          <v-btn
+            href="https://github.com/sctnightcore/frontend_cmru_pca2020/blob/main/LICENSE"
+            >คลิ๊กที่นี้เพื่ออ่าน</v-btn
+          >
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>
