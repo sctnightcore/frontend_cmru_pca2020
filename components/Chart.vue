@@ -33,7 +33,7 @@ export default {
         },
         title: {
           display: true,
-          text: 'Google analytics data',
+          text: 'CMRU PCA 2020 analytics data',
           fontSize: 24,
           fontColor: '#6b7280',
         },
