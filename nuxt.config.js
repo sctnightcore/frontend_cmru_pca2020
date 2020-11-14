@@ -3,11 +3,11 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
-
+  target: 'static',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - frontend_cmru_pca2020',
-    title: 'frontend_cmru_pca2020',
+    titleTemplate: 'CMRU PCA 2020 Live Score ♥',
+    title: 'CMRU PCA 2020 Live Score ♥',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
