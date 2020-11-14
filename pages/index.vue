@@ -16,7 +16,7 @@
             disable-pagination
           >
             <template v-slot:item.action="{ item }">
-              <v-btn :href="item.url.replace('m.', 'www.')">
+              <v-btn :href="item.url.replace('m.', 'www.')" target="_blank">
                 <v-icon>mdi-share</v-icon>
               </v-btn>
             </template>
