@@ -57,7 +57,7 @@ export default {
         { text: 'ชื่อ', value: 'name', sortable: false },
         { text: 'สาขา', value: 'class', sortable: false },
         { text: 'ลิ้ง Url', value: 'action', sortable: false },
-        { text: 'จำนวน Like', value: 'like' },
+        { text: 'จำนวน Like', value: 'all' },
         { text: 'จำนวน Share', value: 'share' },
         { text: 'คะแนนรวม', value: 'point' },
         ,
