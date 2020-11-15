@@ -14,7 +14,7 @@ export default {
         datasets: [
           {
             label: 'Like',
-            data: this.charts.like,
+            data: this.charts.all,
             backgroundColor: '#003f5c',
           },
           {
