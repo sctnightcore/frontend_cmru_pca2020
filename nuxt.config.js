@@ -79,8 +79,31 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    transpile: [({ isLegacy }) => isLegacy && 'ky']
-
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.(css|vue)$/,
+            chunks: 'all',
+            enforce: true
+          }
+        }
+      }
+    },
+    babel: {
+      presets({ isServer }) {
+        return [
+          [
+            require.resolve("@nuxt/babel-preset-app"),
+            {
+              buildTarget: isServer ? "server" : "client",
+              corejs: { version: 3 }
+            }
+          ]
+        ];
+      }
+    }
   },
 
   generate: {
