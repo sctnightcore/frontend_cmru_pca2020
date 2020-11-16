@@ -1,19 +1,20 @@
 <template>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="12" md="12">
-      <v-card>
+      <v-card flat>
         <v-card-title class="justify-center" primary-title>
           ตารางคะแนนรวม CMRU People Choice Award 2020
         </v-card-title>
-        <v-divider> </v-divider>
+        <v-card-subtitle> ข้อมูลอัพเดพเมื่อ {{ users.time }} </v-card-subtitle>
         <v-card-text class="pa-2 ma-2">
-          <h3>อัพเดพข้อมูลล่าสุด {{ users.time }}</h3>
           <v-data-table
             :headers="tables_headers"
             :items="users.data"
             :loading="tables_loading != true"
             hide-default-footer
             disable-pagination
+            mobile-breakpoint="0"
+            class="elevation-1"
           >
             <template v-slot:item.action="{ item }">
               <v-btn :href="item.url.replace('m.', 'www.')" target="_blank">
@@ -21,16 +22,17 @@
               </v-btn>
             </template>
           </v-data-table>
-          <br/>
+          <br />
           <!-- Show Chart-->
-          <Chart :charts="charts.data" :width="500" :height="300"></Chart>
+          <Chart
+            :charts="charts.data"
+            :width="500"
+            :height="300"
+          ></Chart>
         </v-card-text>
         <v-card-actions>
           <v-icon x-large left>mdi-github</v-icon>
-          <h4>
-            โปรเจคนี้ อยู่ภายใต้ GNU General Public License v3.0 ว่าด้วย Open
-            Source&nbsp
-          </h4>
+          <h4>โปรเจคนี้ อยู่ภายใต้ GNU General Public License v3.0&nbsp</h4>
           <v-btn
             href="https://github.com/sctnightcore/frontend_cmru_pca2020/blob/main/LICENSE"
             >คลิ๊กที่นี้เพื่ออ่าน</v-btn
@@ -56,10 +58,11 @@ export default {
         },
         { text: 'ชื่อ', value: 'name', sortable: false },
         { text: 'สาขา', value: 'class', sortable: false },
-        { text: 'ลิ้ง Url', value: 'action', sortable: false },
         { text: 'จำนวน Like', value: 'all' },
         { text: 'จำนวน Share', value: 'share' },
         { text: 'คะแนนรวม', value: 'point' },
+        { text: 'ลิ้ง Url', value: 'action', sortable: false },
+
         ,
       ],
     }
