@@ -24,11 +24,7 @@
           </v-data-table>
           <br />
           <!-- Show Chart-->
-          <Chart
-            :charts="charts.data"
-            :width="500"
-            :height="300"
-          ></Chart>
+          <Chart :charts="charts.data" :width="500" :height="300"></Chart>
         </v-card-text>
         <v-card-actions>
           <v-icon x-large left>mdi-github</v-icon>
@@ -87,3 +83,9 @@ export default {
   mounted() {},
 }
 </script>
+
+<style>
+table.v-table {
+  max-width: none;
+}
+</style>

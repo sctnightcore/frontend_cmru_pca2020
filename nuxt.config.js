@@ -2,8 +2,14 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+    timing: false
+  },
   ssr: false,
   target: 'static',
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: 'CMRU PCA 2020 Live Score ♥',
@@ -73,7 +79,8 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    extractCSS: true
+    transpile: [({ isLegacy }) => isLegacy && 'ky']
+
   },
 
   generate: {
