@@ -64,19 +64,28 @@ export default {
     }
   },
   async asyncData({ $axios }) {
-    const [users, charts] = await Promise.all([
-      $axios.get(
-        'https://raw.githubusercontent.com/sctnightcore/cmru_People_Choice_Award_2020/master/data.json'
-      ),
-      $axios.get(
-        'https://raw.githubusercontent.com/sctnightcore/cmru_People_Choice_Award_2020/master/chart_data.json'
-      ),
-    ])
-
-    return {
-      users: users.data,
-      charts: charts.data,
-      tables_loading: true,
+    try {
+      const [users, charts] = await Promise.all([
+        fetch(
+          'https://raw.githubusercontent.com/sctnightcore/cmru_People_Choice_Award_2020/master/data.json'
+        ).then((res) => res.json()),
+        fetch(
+          'https://raw.githubusercontent.com/sctnightcore/cmru_People_Choice_Award_2020/master/chart_data.json'
+        ).then((res) => res.json()),
+      ])
+      return {
+        users: users,
+        charts: charts,
+        tables_loading: true,
+      }
+    } catch (e) {
+      if (e.message === 'Network Error') {
+        return {
+          users: [],
+          charts: [],
+          tables_loading: true,
+        }
+      }
     }
   },
 
