@@ -5,7 +5,10 @@
         <v-card-title class="justify-center" primary-title>
           ตารางคะแนนรวม CMRU People Choice Award 2020
         </v-card-title>
-        <v-card-subtitle>ข้อมูลอัพเดพ: {{users.time}} <br/>หมายเหตุ: การคำนวณคะแนนตาม 1 ไลค์ ต่อ 1 คะแนน และ 1 แชร์ ต่อ 3 คะแนน</v-card-subtitle>
+        <v-card-subtitle
+          >ข้อมูลอัพเดพ: {{ users.time }} <br />หมายเหตุ: การคำนวณคะแนนตาม 1
+          ไลค์ ต่อ 1 คะแนน และ 1 แชร์ ต่อ 3 คะแนน</v-card-subtitle
+        >
         <v-card-text class="pa-2 ma-2">
           <v-data-table
             :headers="tables_headers"
@@ -53,6 +56,8 @@ export default {
           value: 'id',
         },
         { text: 'ชื่อ', value: 'name', sortable: false },
+        { text: 'ชื่อเล่น', value: 'nick_name', sortable: false },
+
         { text: 'สาขา', value: 'class', sortable: false },
         { text: 'จำนวน Like', value: 'all' },
         { text: 'จำนวน Share', value: 'share' },
