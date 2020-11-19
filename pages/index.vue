@@ -5,7 +5,7 @@
         <v-card-title class="justify-center" primary-title>
           ตารางคะแนนรวม CMRU People Choice Award 2020
         </v-card-title>
-        <v-card-subtitle> ข้อมูลอัพเดพเมื่อ {{ users.time }} </v-card-subtitle>
+        <v-card-subtitle>ข้อมูลอัพเดพ: {{users.time}} <br/>หมายเหตุ: การคำนวณคะแนนตาม 1 ไลค์ ต่อ 1 คะแนน และ 1 แชร์ ต่อ 3 คะแนน</v-card-subtitle>
         <v-card-text class="pa-2 ma-2">
           <v-data-table
             :headers="tables_headers"
