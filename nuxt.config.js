@@ -119,7 +119,7 @@ export default {
     },
     workbox: {
       cacheAssets: false,
-      offline: false
+      //offline: false
     }
   }
 }
