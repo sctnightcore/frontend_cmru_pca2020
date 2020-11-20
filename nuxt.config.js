@@ -116,6 +116,10 @@ export default {
     manifest: {
       name: 'CMRU People Choice Award 2020',
       short_name: 'CMRU PCA 2020 Live Score'
+    },
+    workbox: {
+      cacheAssets: false,
+      offline: false
     }
   }
 }
