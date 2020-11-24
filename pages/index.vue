@@ -76,6 +76,13 @@
                   </v-btn>
                 </template>
 
+                <template v-slot:item.all="{ item }">
+                  {{ item.point.toLocaleString() }}
+                </template>
+
+                <template v-slot:item.share="{ item }">
+                  {{ item.share.toLocaleString() }}
+                </template>
                 <template v-slot:item.point="{ item }">
                   {{ item.point.toLocaleString() }}
                 </template>
