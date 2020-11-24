@@ -77,15 +77,17 @@
                 </template>
 
                 <template v-slot:item.all="{ item }">
-                  {{ item.point.toLocaleString() }}
+                  {{ item.all.toLocaleString() }}
                 </template>
 
                 <template v-slot:item.share="{ item }">
                   {{ item.share.toLocaleString() }}
                 </template>
+
                 <template v-slot:item.point="{ item }">
                   {{ item.point.toLocaleString() }}
                 </template>
+              
               </v-data-table>
             </v-card-text>
           </v-card>
